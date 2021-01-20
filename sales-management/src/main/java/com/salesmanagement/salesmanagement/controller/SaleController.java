@@ -28,6 +28,7 @@ public class SaleController {
     }
 
     //getById
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/sales/{id}")
     public ResponseEntity<Sale> getSaleById(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {
@@ -44,6 +45,7 @@ public class SaleController {
     }
 
     //Put
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/sales/{id}")
     public ResponseEntity<Sale> updateSale(@PathVariable(value = "id") Long id,
                                                  @Validated @RequestBody Sale saleDetails) throws ResourceNotFoundException {
@@ -58,6 +60,7 @@ public class SaleController {
     }
 
     //Delete
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/sales/{id}")
     public Map<String, Boolean> deleteSale(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {

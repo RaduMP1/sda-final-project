@@ -31,6 +31,7 @@ public class SupplierContactController {
 
 
     //getById
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/supplier_contacts/{id}")
     public ResponseEntity<SupplierContact> getSupplierContactById(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {
@@ -49,6 +50,7 @@ public class SupplierContactController {
     }
 
     //Put
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/supplier_contacts/{id}")
     public ResponseEntity<SupplierContact> updateSupplierContact(@PathVariable(value = "id") Long id,
                                                              @Validated @RequestBody SupplierContact supplierContactDetails) throws ResourceNotFoundException {
@@ -64,6 +66,7 @@ public class SupplierContactController {
     }
 
     //Delete
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/supplier_contacts/{id}")
     public Map<String, Boolean> deleteSupplierContact(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {

@@ -32,6 +32,7 @@ public class ClientController {
 
 
     //getById
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/clients/{id}")
     public ResponseEntity<Client> getClientById(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {
@@ -50,6 +51,7 @@ public class ClientController {
     }
 
     //Put
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/clients/{id}")
     public ResponseEntity<Client> updateClient(@PathVariable(value = "id") Long id,
                                              @Validated @RequestBody Client clientDetails) throws ResourceNotFoundException {
@@ -64,6 +66,7 @@ public class ClientController {
     }
 
     //Delete
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/clients/{id}")
     public Map<String, Boolean> deleteClient(@PathVariable(value = "id") Long id)
             throws ResourceNotFoundException {
