@@ -39,6 +39,7 @@ public class ProductController {
     }
 
     //Post
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/products")
     public Product createProduct(@Validated @RequestBody Product product) {
         return productRepository.save(product);

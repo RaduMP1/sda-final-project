@@ -41,6 +41,7 @@ public class ClientContactController {
 
 
     //Post
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/client_contacts")
     public ClientContact createClientContact(@Validated @RequestBody ClientContact clientContact) {
         return clientContactRepository.save(clientContact);

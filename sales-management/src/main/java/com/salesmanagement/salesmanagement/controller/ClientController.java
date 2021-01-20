@@ -43,6 +43,7 @@ public class ClientController {
 
 
     //Post
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/clients")
     public Client createClient(@Validated @RequestBody Client client) {
         return clientRepository.save(client);

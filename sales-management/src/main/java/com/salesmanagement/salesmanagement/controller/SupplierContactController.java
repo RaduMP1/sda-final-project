@@ -42,6 +42,7 @@ public class SupplierContactController {
 
 
     //Post
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/supplier_contacts")
     public SupplierContact createSupplierContact(@Validated @RequestBody SupplierContact supplierContact) {
         return supplierContactRepository.save(supplierContact);

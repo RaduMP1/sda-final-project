@@ -38,6 +38,7 @@ public class SupplierController {
     }
 
     //Post
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("/suppliers")
     public Supplier createSupplier(@Validated @RequestBody Supplier supplier) {
         return supplierRepository.save(supplier);
